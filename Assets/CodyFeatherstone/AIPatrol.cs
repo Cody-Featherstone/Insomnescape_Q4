@@ -31,12 +31,17 @@ public class AIPatrol : MonoBehaviour
     {
         if (mustPatrol)
         {
-            mustTurn = Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
+            mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
         }
     }
 
     void Patrol()
     {
+        if (mustTurn)
+        {
+            Flip();
+        }
+        
         rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
     }
     void Flip()
