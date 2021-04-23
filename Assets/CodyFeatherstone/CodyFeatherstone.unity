@@ -325,17 +325,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1509599007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816de862dac5305438c85004370894c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 69c12f3e3e52cee4a84f1329ec64b0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0
-  mustPatrol: 0
-  mustTurn: 0
-  rb: {fileID: 0}
-  groundCheckPos: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  speed: 0
+  startWaitTime: 0
+  moveSpots: []
 --- !u!1 &1597708986
 GameObject:
   m_ObjectHideFlags: 0
