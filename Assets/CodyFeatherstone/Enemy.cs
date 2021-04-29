@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public float minY;
     public float maxY;
 
-    Rigidbody2D rb;
+    //Rigidbody2D rb;
 
 
 
@@ -22,7 +22,8 @@ public class Enemy : MonoBehaviour
     public float rotationSpeed;
 
     public LineRenderer lineOfSight;
-
+    public Gradient redColor;
+    public Gradient greenColor;
 
 
     // Start is called before the first frame update
@@ -63,6 +64,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
             lineOfSight.SetPosition(1, hitInfo.point);
+            lineOfSight.colorGradient = redColor;
 
             if (hitInfo.collider.CompareTag("Player"))
             {
@@ -75,6 +77,7 @@ public class Enemy : MonoBehaviour
 
             Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
             lineOfSight.SetPosition(1, transform.position + transform.right * distance);
+            lineOfSight.colorGradient = greenColor;
         }
 
         lineOfSight.SetPosition(0, transform.position);
