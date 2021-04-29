@@ -23,9 +23,14 @@ public class Hiding : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "MainCharacter")
+        if (collision.gameObject.name != "MainCharacter")
+        {
+            collision.gameObject.SetActive(true);
+        }
+        else
         {
             collision.gameObject.SetActive(false);
         }
+
     }
 }
