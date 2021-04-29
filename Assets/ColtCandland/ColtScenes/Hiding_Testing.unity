@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1346743164}
   - component: {fileID: 1346743163}
   - component: {fileID: 1346743166}
+  - component: {fileID: 1346743167}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -228,7 +229,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1346743166
 Rigidbody2D:
@@ -251,6 +252,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1346743167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346743162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495d458670b9db44a933bb4778ec5a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1980710319}
 --- !u!1 &1845917812
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +291,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845917812}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1845917814
 Camera:
   m_ObjectHideFlags: 0
@@ -411,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 8876140032938720089, guid: 959990a356cd47147a8fa2d60e5d8ba9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8876140032938720089, guid: 959990a356cd47147a8fa2d60e5d8ba9,
         type: 3}
@@ -440,3 +454,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959990a356cd47147a8fa2d60e5d8ba9, type: 3}
+--- !u!1 &1980710319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8876140032938720095, guid: 959990a356cd47147a8fa2d60e5d8ba9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1951106426}
+  m_PrefabAsset: {fileID: 0}
