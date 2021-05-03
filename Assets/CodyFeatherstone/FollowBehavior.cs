@@ -77,7 +77,7 @@ public class FollowBehavior : StateMachineBehaviour
                 lineOfSight.SetPosition(1, animator.transform.position + animator.transform.right * distance);
                 lineOfSight.colorGradient = greenColor;
             }
-
+            //
             lineOfSight.SetPosition(0, animator.transform.position);
         
     }
