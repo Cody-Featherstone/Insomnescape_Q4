@@ -23,13 +23,14 @@ public class FollowBehavior : StateMachineBehaviour
     public Gradient greenColor;
 
     private Transform playerPos;
-    RaycastHit2D hitInfo;
+    
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(animator.transform.position, animator.transform.right, distance);
+        
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        Physics2D.queriesStartInColliders = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -39,18 +40,9 @@ public class FollowBehavior : StateMachineBehaviour
         
         
            
-            if (Vector2.Distance(animator.transform.position, moveSpot[].position) < 0.2f)
+            if (Vector2.Distance(animator.transform.position, playerPos.position) < 0.2f)
             {
-                if (waitTime <= 0)
-                {
-
-                    waitTime = startWaitTime;
-                    moveSpot[].position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-                }
-                else
-                {
-                    waitTime -= Time.deltaTime;
-                }
+               
             }
             //the Rotation and detection of the player and LOS
             animator.transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
@@ -66,7 +58,7 @@ public class FollowBehavior : StateMachineBehaviour
                 if (hitInfo.collider.CompareTag("Player"))
                 {
                     animator.SetBool("IsFollowing", false);
-                    animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpot.position, speed * Time.deltaTime);
+                    animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
                 }
 
             }

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public Transform[] moveSpots;
+    public Vector2 currentSpot;
     public float speed;
     public float startWaitTime;
     private float waitTime;
 
-    public Transform moveSpot;
+    
     public float minX;
     public float maxX;
     public float minY;
@@ -30,7 +32,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         waitTime = startWaitTime;
-        moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        currentSpot = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
 
         //Spotting Mechanic
         Physics2D.queriesStartInColliders = false;
@@ -40,15 +42,15 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, currentSpot, speed * Time.deltaTime);
 
-        if(Vector2.Distance(transform.position, moveSpot.position) < 0.2f)
+        if(Vector2.Distance(transform.position, currentSpot) < 0.2f)
         {
             if(waitTime<= 0)
             {
                 
                 waitTime = startWaitTime;
-                moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                currentSpot = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
             }
             else
             {
@@ -68,7 +70,7 @@ public class Enemy : MonoBehaviour
 
             if (hitInfo.collider.CompareTag("Player"))
             {
-                Destroy(hitInfo.collider.gameObject);
+                //Destroy(hitInfo.collider.gameObject);
             }
 
         }
