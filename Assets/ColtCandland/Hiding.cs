@@ -29,7 +29,8 @@ public class Hiding : MonoBehaviour
         }
         else
         {
-            collision.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
         }
 
     }
