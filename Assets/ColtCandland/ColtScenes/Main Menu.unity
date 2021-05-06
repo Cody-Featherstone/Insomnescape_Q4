@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 366366586}
   - component: {fileID: 366366585}
   - component: {fileID: 366366584}
+  - component: {fileID: 366366587}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -240,6 +241,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366366582}
   m_CullTransparentMesh: 0
+--- !u!114 &366366587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366366582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cf4508a283fc749a1e3086fb7de25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: CodyFeatherstone
 --- !u!1 &640079446
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +503,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Quit
 --- !u!222 &1030069659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -576,6 +590,7 @@ GameObject:
   - component: {fileID: 1317934647}
   - component: {fileID: 1317934646}
   - component: {fileID: 1317934645}
+  - component: {fileID: 1317934648}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -683,6 +698,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317934643}
   m_CullTransparentMesh: 0
+--- !u!114 &1317934648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317934643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c1ce05f1725ce409ad50af6bf4dd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1428189280
 GameObject:
   m_ObjectHideFlags: 0
