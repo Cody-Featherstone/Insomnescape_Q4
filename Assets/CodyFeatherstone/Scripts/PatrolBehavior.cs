@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PatrolBehavior : StateMachineBehaviour
 {
-    private PatrolSpots patrol;
+    public int Array;
     public float startWaitTime;
     private float waitTime;
     public float speed;
@@ -16,32 +16,38 @@ public class PatrolBehavior : StateMachineBehaviour
     {
         moveSpots = animator.GetComponent<Enemy>().moveSpots;
         waitTime = startWaitTime;
-        randomSpots = Random.Range(0, moveSpots.Length);
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
+        Array++;
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpots[Array].position, speed * Time.deltaTime);
+
+            if (Vector2.Distance(animator.transform.position, moveSpots[Array].position) < 0.2f)
+            {
+                if (waitTime <= 0)
+                {
+
+                    waitTime = startWaitTime;
+                Array++;
+                }
+                else
+                {
+                    waitTime -= Time.deltaTime;
+                }
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                animator.SetBool("isPatrolling", true);
+                }
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    animator.SetBool("isFollowing", true);
+                }
+            }
         
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpots[randomSpots].position, speed * Time.deltaTime);
-
-        if (Vector2.Distance(animator.transform.position, moveSpots[randomSpots].position) < 0.2f)
-        {
-            if (waitTime <= 0)
-            {
-
-                waitTime = startWaitTime;
-                randomSpots = Random.Range(0, moveSpots.Length);
-            }
-            else
-            {
-                waitTime -= Time.deltaTime;
-            }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                animator.SetBool("isFollowing", true);
-            }
-        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
