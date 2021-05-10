@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PatrolBehavior : StateMachineBehaviour
 {
+    public FollowBehavior isFollowing;
     public int Array;
     public float startWaitTime;
     private float waitTime;
@@ -22,8 +23,9 @@ public class PatrolBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        Array++;
+        if (isFollowing == true)
+        {
+            Array++;
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpots[Array].position, speed * Time.deltaTime);
 
             if (Vector2.Distance(animator.transform.position, moveSpots[Array].position) < 0.2f)
@@ -32,7 +34,7 @@ public class PatrolBehavior : StateMachineBehaviour
                 {
 
                     waitTime = startWaitTime;
-                Array++;
+                    Array++;
                 }
                 else
                 {
@@ -40,14 +42,14 @@ public class PatrolBehavior : StateMachineBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.P))
                 {
-                animator.SetBool("isPatrolling", true);
+                    animator.SetBool("isPatrolling", true);
                 }
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     animator.SetBool("isFollowing", true);
                 }
             }
-        
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
