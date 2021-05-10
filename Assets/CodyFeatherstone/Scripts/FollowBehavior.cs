@@ -46,12 +46,12 @@ public class FollowBehavior : StateMachineBehaviour
 
         if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
         {   //move towards the player
-            animator.SetBool("isFollowing", false);
+            animator.SetBool("IsFollowing", true);
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
             if (Vector3.Distance(animator.transform.position, playerPos.position) > distance)
             {//move if distance from target is greater than distance
                 animator.transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-                animator.SetBool("isFollowing", true);
+                animator.SetBool("IsFollowing", false);
             }
         }
         //animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);

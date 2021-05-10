@@ -23,9 +23,11 @@ public class PatrolBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (isFollowing == true)
+        if (isFollowing == false)
         {
-            Array++;
+            //Array++;
+          
+            //Debug.Log("The value of Array is " + Array);
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpots[Array].position, speed * Time.deltaTime);
 
             if (Vector2.Distance(animator.transform.position, moveSpots[Array].position) < 0.2f)
@@ -35,6 +37,7 @@ public class PatrolBehavior : StateMachineBehaviour
 
                     waitTime = startWaitTime;
                     Array++;
+                    Array = Array % moveSpots.Length;
                 }
                 else
                 {
@@ -42,11 +45,11 @@ public class PatrolBehavior : StateMachineBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.P))
                 {
-                    animator.SetBool("isPatrolling", true);
+                    animator.SetBool("IsPatrolling", true);
                 }
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    animator.SetBool("isFollowing", true);
+                    animator.SetBool("IsFollowing", true);
                 }
             }
         }

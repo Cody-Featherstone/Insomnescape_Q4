@@ -549,9 +549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpots:
-  - {fileID: 1182399339}
-  - {fileID: 40943467}
-  - {fileID: 1134608869}
+  - {fileID: 1162320929}
+  - {fileID: 1144628691}
+  - {fileID: 541406103}
   - {fileID: 741591406}
   - {fileID: 1162320929}
   - {fileID: 900480493}
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509599007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ccd7c271678e7245a5f05f991d25cb3, type: 3}
   m_Name: 
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509599007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 122f35c28d25d9f468046aeb343466cc, type: 3}
   m_Name: 
@@ -1079,7 +1079,7 @@ PrefabInstance:
     - target: {fileID: 8876140032938720089, guid: 959990a356cd47147a8fa2d60e5d8ba9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8.05
       objectReference: {fileID: 0}
     - target: {fileID: 8876140032938720089, guid: 959990a356cd47147a8fa2d60e5d8ba9,
         type: 3}
