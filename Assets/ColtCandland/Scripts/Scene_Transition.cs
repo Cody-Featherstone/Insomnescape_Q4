@@ -23,7 +23,7 @@ public class Scene_Transition : MonoBehaviour
 
     
 
-    private void OnMouseDown()
+    public void SceneSwitch()
     {
         SceneManager.LoadScene(nextScene);
     }
