@@ -153,7 +153,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.77
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -163,8 +163,8 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 291.31
-  m_PointLightOuterAngle: 336.68
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 5.24664
   m_PointLightOuterRadius: 17.845556
   m_PointLightDistance: 3
@@ -191,7 +191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &148361722
 GameObject:
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.52
-  m_Color: {r: 0.5283019, g: 0.5258099, b: 0.5258099, a: 1}
+  m_Color: {r: 0.18867922, g: 0.18778922, b: 0.18778922, a: 1}
   m_Intensity: 0.6
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -414,7 +414,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &498627384
 GameObject:
@@ -460,7 +460,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1052275301
+--- !u!1 &1084873295
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,8 +468,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1052275303}
-  - component: {fileID: 1052275302}
+  - component: {fileID: 1084873297}
+  - component: {fileID: 1084873296}
   m_Layer: 0
   m_Name: Freeform Light 2D
   m_TagString: Untagged
@@ -477,13 +477,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1052275302
+--- !u!114 &1084873296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052275301}
+  m_GameObject: {fileID: 1084873295}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.8396226, g: 0.49284562, b: 0.13861692, a: 1}
+  m_Color: {r: 0.754717, g: 0.429477, b: 0.09611962, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
@@ -514,34 +514,29 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: 2, y: 4, z: 0}
-  - {x: -1, y: 3, z: 0}
-  - {x: -4, y: 0, z: 0}
-  - {x: -4, y: -3, z: 0}
-  - {x: -4, y: -5, z: 0}
-  - {x: -4, y: -7, z: 0}
-  - {x: -2.6518931, y: -7.250082, z: 0}
-  - {x: -0.17858124, y: -8.232288, z: 0}
-  - {x: 2.1124382, y: -6.8718767, z: 0}
-  - {x: 5.437724, y: -6.455518, z: 0}
-  - {x: 6.7680387, y: -4, z: 0}
-  - {x: 7.142997, y: -1.0177927, z: 0}
-  - {x: 5.3273277, y: 1.2317398, z: 0}
-  - {x: 5, y: 3, z: 0}
-  - {x: 5, y: 3, z: 0}
---- !u!4 &1052275303
+  - {x: -0.9530144, y: -3.0972824, z: 0}
+  - {x: 1.5, y: -3.6, z: 0}
+  - {x: 2.5, y: -2.6, z: 0}
+  - {x: 3.5, y: -1.6, z: 0}
+  - {x: 3.5, y: 0.39999998, z: 0}
+  - {x: 2.5, y: 2.4, z: 0}
+  - {x: 0.9530144, y: 3.00668, z: 0}
+  - {x: -1.0147953, y: 2.8390617, z: 0}
+  - {x: -2.5, y: 1.4, z: 0}
+  - {x: -2.5, y: -1.6, z: 0}
+--- !u!4 &1084873297
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052275301}
+  m_GameObject: {fileID: 1084873295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 2, z: 0}
+  m_LocalPosition: {x: 3.5, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1405900082
 GameObject:
@@ -737,5 +732,5 @@ Transform:
   m_LocalScale: {x: 59.90615, y: 27.54045, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
