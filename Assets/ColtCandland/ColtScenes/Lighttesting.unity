@@ -121,6 +121,78 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &41647266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41647268}
+  - component: {fileID: 41647267}
+  m_Layer: 0
+  m_Name: Point Light 2D (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &41647267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41647266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.77
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.4
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 291.31
+  m_PointLightOuterAngle: 336.68
+  m_PointLightInnerRadius: 5.24664
+  m_PointLightOuterRadius: 17.845556
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!4 &41647268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41647266}
+  m_LocalRotation: {x: 0, y: 0, z: -0.82083136, w: 0.5711707}
+  m_LocalPosition: {x: 17, y: -1.9961977, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &148361722
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,8 +376,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.52
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.5283019, g: 0.5258099, b: 0.5258099, a: 1}
+  m_Intensity: 0.6
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -338,7 +410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397009610}
   m_LocalRotation: {x: 0, y: 0, z: -0.6020235, w: 0.7984784}
-  m_LocalPosition: {x: -12, y: -1.9961977, z: 0}
+  m_LocalPosition: {x: -11, y: -1.9961977, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -420,8 +492,8 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.9150943, g: 0.6012113, b: 0.15970986, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.8396226, g: 0.49284562, b: 0.13861692, a: 1}
+  m_Intensity: 0.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -442,9 +514,12 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -2, y: 1, z: 0}
-  - {x: -3, y: -2, z: 0}
-  - {x: -2, y: -4, z: 0}
+  - {x: 2, y: 4, z: 0}
+  - {x: -1, y: 3, z: 0}
+  - {x: -4, y: 0, z: 0}
+  - {x: -4, y: -3, z: 0}
+  - {x: -4, y: -5, z: 0}
+  - {x: -4, y: -7, z: 0}
   - {x: -2.6518931, y: -7.250082, z: 0}
   - {x: -0.17858124, y: -8.232288, z: 0}
   - {x: 2.1124382, y: -6.8718767, z: 0}
@@ -452,8 +527,8 @@ MonoBehaviour:
   - {x: 6.7680387, y: -4, z: 0}
   - {x: 7.142997, y: -1.0177927, z: 0}
   - {x: 5.3273277, y: 1.2317398, z: 0}
-  - {x: 2.1339378, y: 2.5179563, z: 0}
-  - {x: -0.40826464, y: 2.0857444, z: 0}
+  - {x: 5, y: 3, z: 0}
+  - {x: 5, y: 3, z: 0}
 --- !u!4 &1052275303
 Transform:
   m_ObjectHideFlags: 0
@@ -658,8 +733,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689610000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.944, y: -1.348, z: 0}
-  m_LocalScale: {x: 14.069372, y: 12.840271, z: 1}
+  m_LocalPosition: {x: -4.7, y: -2.3, z: 0}
+  m_LocalScale: {x: 59.90615, y: 27.54045, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
