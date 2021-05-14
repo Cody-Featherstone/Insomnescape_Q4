@@ -20,4 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ColtCandland/ColtScenes/ColtScene2.unity
     guid: 1b0c6f81e532b0447bd9335595eadc5f
+  - enabled: 1
+    path: Assets/ColtCandland/Credit Scenes/CodyCredits.unity
+    guid: a1cbdf843d138ab4bb5665dddcbeaac2
+  - enabled: 1
+    path: Assets/ColtCandland/Credit Scenes/ColtCredits.unity
+    guid: 9005b3c082ef8fc42bccd42c7e05d60a
+  - enabled: 1
+    path: Assets/ColtCandland/Credit Scenes/HannahCredits.unity
+    guid: 57c9e92980855774080b942324556330
+  - enabled: 1
+    path: Assets/ColtCandland/Credit Scenes/KatelehnCredits.unity
+    guid: 3d0a9a53bc3038b49b5378c2ab60fbf9
   m_configObjects: {}
