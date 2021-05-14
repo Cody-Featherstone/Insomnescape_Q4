@@ -51,8 +51,16 @@ public class FollowBehavior : StateMachineBehaviour
             if (Vector3.Distance(animator.transform.position, playerPos.position) > distance)
             {//move if distance from target is greater than distance
                 animator.transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
-                animator.SetBool("IsFollowing", false);
+                //animator.SetBool("IsFollowing", false);
+                //animator.SetBool("IsPatrolling", true);
+
             }
+
+        }
+        else
+        {
+            animator.SetBool("IsFollowing", false);
+            animator.SetBool("IsPatrolling", true);
         }
         //animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
         /*

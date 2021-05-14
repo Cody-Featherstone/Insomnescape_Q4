@@ -39,8 +39,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFollowing: {fileID: 0}
   Array: 0
-  startWaitTime: 0
-  speed: 3
+  startWaitTime: 2
+  speed: 4.75
   moveSpots:
   - {fileID: 0}
   - {fileID: 0}
@@ -52,6 +52,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  distance: 10
+  agroRange: 5
 --- !u!1101 &-3606274037511348583
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -249,7 +251,6 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7963410738688770638}
-  - {fileID: 7899744005465866613}
   m_StateMachineBehaviours:
   - {fileID: -4674461503132253649}
   m_Position: {x: 50, y: 50, z: 0}
@@ -304,9 +305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b97f7ed181447d4f9bc1075386411ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4.75
   startWaitTime: 2
-  agroRange: 5
+  agroRange: 10
   distance: 10
 --- !u!1101 &6087148877368736655
 AnimatorStateTransition:
@@ -328,31 +329,6 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &7899744005465866613
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: IsPatrolling
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -266007530712841103}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.6875
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
