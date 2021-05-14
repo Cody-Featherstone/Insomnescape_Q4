@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ColtCandland/ColtScenes/Credits.unity
     guid: 2b5b810fddc3952409580b13fd31d3b2
+  - enabled: 1
+    path: Assets/ColtCandland/ColtScenes/ColtScene2.unity
+    guid: 1b0c6f81e532b0447bd9335595eadc5f
   m_configObjects: {}
