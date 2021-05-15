@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ColtCandland/Credit Scenes/KatelehnCredits.unity
     guid: 3d0a9a53bc3038b49b5378c2ab60fbf9
+  - enabled: 1
+    path: Assets/ColtCandland/ColtScenes/Hiding_Testing.unity
+    guid: 9403d0f9d5cc7464d983ea5b72814f18
   m_configObjects: {}
