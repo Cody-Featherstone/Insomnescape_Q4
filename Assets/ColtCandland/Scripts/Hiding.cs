@@ -24,7 +24,7 @@ public class Hiding : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "MainCharacter")
+        if (collision.gameObject.name == "Player")
         {
             SR.enabled = false;
             //collision.gameObject.SetActive(true);
@@ -36,7 +36,7 @@ public class Hiding : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "MainCharacter")
+        if (collision.gameObject.name == "Player")
         {
 
             SR.enabled = true;
