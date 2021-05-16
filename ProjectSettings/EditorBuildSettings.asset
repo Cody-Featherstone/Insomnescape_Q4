@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ColtCandland/ColtScenes/Hiding_Testing.unity
     guid: 9403d0f9d5cc7464d983ea5b72814f18
+  - enabled: 1
+    path: Assets/ColtCandland/ColtScenes/ColtScene3.unity
+    guid: 836d0bc84390677498e107367699b85d
   m_configObjects: {}
