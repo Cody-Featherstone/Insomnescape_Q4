@@ -38,7 +38,9 @@ public class FollowBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
+        if (playerPos.GetComponent<SpriteRenderer>().enabled)
+        {
+            if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
         {  //rotate to look at the player
             animator.transform.LookAt(playerPos.position);
             animator.transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
@@ -60,7 +62,13 @@ public class FollowBehavior : StateMachineBehaviour
         else
         {
             animator.SetBool("IsFollowing", false);
+                 animator.SetBool("IsPatrolling", true);
+        }
+        }
+        else
+        {
             animator.SetBool("IsPatrolling", true);
+            animator.SetBool("IsFollowing", false);
         }
         //animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
         /*
@@ -97,7 +105,7 @@ public class FollowBehavior : StateMachineBehaviour
             }
             //
             lineOfSight.SetPosition(0, animator.transform.position);*/
-        
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
