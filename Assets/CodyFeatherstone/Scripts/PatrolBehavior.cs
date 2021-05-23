@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PatrolBehavior : StateMachineBehaviour
 {
+    private GameObject Enemy;
+    private float oldEnemyX;
     public FollowBehavior isFollowing;
     public int Array;
     public float startWaitTime;
@@ -13,28 +15,33 @@ public class PatrolBehavior : StateMachineBehaviour
     private Transform playerPos;
     public float distance;
     public float agroRange;
-
+    SpriteRenderer SR;
     private int randomSpots;
+
+    private Vector2 VelVec;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         moveSpots = animator.GetComponent<Enemy>().moveSpots;
         waitTime = startWaitTime;
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-
+        Enemy = animator.gameObject;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
-            if (isFollowing == false)
+        animator.SetFloat("Horizontal", VelVec.x);
+        animator.SetFloat("Vertical", VelVec.y);
+        if (isFollowing == false)
             {
                 //Array++;
 
                 //Debug.Log("The value of Array is " + Array);
                 animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpots[Array].position, speed * Time.deltaTime);
-
+            VelVec = moveSpots[Array].position - animator.transform.position;
                 if (Vector2.Distance(animator.transform.position, moveSpots[Array].position) < 0.2f)
                 {
                     if (waitTime <= 0)
@@ -54,11 +61,11 @@ public class PatrolBehavior : StateMachineBehaviour
             }
         if (playerPos.GetComponent<SpriteRenderer>().enabled)
         {
-            if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
+            /*if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
             {  //rotate to look at the player
                 animator.transform.LookAt(playerPos.position);
                 animator.transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-            }
+            }*/
 
             if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
             {   //move towards the player

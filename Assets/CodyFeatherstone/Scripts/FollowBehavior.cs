@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class FollowBehavior : StateMachineBehaviour
 {
+    
     public float speed;
     public float startWaitTime;
     //private float waitTime;
-
+    private GameObject Enemy;
     //public Transform[] moveSpot;
 
-    
-    
+    SpriteRenderer SR; 
+
     public float agroRange;
     //Rigidbody2D rb;
 
@@ -25,7 +26,7 @@ public class FollowBehavior : StateMachineBehaviour
     //public Gradient greenColor;
 
     private Transform playerPos;
-    
+    private Vector2 VelVec;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -33,24 +34,30 @@ public class FollowBehavior : StateMachineBehaviour
         
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         Physics2D.queriesStartInColliders = false;
+        SR = animator.GetComponent<SpriteRenderer>();
+        Enemy = animator.gameObject;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetFloat("Horizontal", VelVec.x);
+        animator.SetFloat("Vertical", VelVec.y);
         if (playerPos.GetComponent<SpriteRenderer>().enabled)
         {
-            if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
-        {  //rotate to look at the player
-            animator.transform.LookAt(playerPos.position);
-            animator.transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-        }
+            /* if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
+         {  //rotate to look at the player
+             //animator.transform.LookAt(playerPos.position);
+             //animator.transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+         }*/
+            
 
-        if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
+            if (Vector3.Distance(animator.transform.position, playerPos.position) < agroRange) //Agro range
         {   //move towards the player
             animator.SetBool("IsFollowing", true);
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
-            if (Vector3.Distance(animator.transform.position, playerPos.position) > distance)
+                VelVec = playerPos.position - animator.transform.position;
+                if (Vector3.Distance(animator.transform.position, playerPos.position) > distance)
             {//move if distance from target is greater than distance
                 animator.transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
                 //animator.SetBool("IsFollowing", false);
