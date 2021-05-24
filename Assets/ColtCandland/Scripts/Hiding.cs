@@ -6,12 +6,13 @@ public class Hiding : MonoBehaviour
 {
     public GameObject Player;
     public SpriteRenderer SR;
-
+    public ParticleSystem PS;
 
     // Start is called before the first frame update
     void Start()
     {
         SR = Player.GetComponent<SpriteRenderer>();
+        PS = Player.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class Hiding : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name);
             SR.enabled = false;
+            PS.Play();
             //collision.gameObject.SetActive(true);
             
         }

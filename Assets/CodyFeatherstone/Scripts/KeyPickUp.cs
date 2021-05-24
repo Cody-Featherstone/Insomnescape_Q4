@@ -21,7 +21,7 @@ public class KeyPickUp : MonoBehaviour
         if(GameManager.KeyCount == 5)
         {
             //switch scenes
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("Credits");
             Debug.Log("YOU WIN!!");
         }
     }
