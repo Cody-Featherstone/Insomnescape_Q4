@@ -20,29 +20,45 @@ public class Hiding : MonoBehaviour
 
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        if (collision.gameObject.name == "Player" && Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log(collision.gameObject.name);
+            SR.enabled = false;
+            //collision.gameObject.SetActive(true);
+            
+        }
+    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+
+
+
+   /* private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player" && Input.GetKeyUp(KeyCode.Space))
         {
             SR.enabled = false;
             //collision.gameObject.SetActive(true);
         }
 
 
-    }
+    }*/
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player" )
         {
 
             SR.enabled = true;
             //collision.gameObject.SetActive(true);
 
-           
+
 
 
         }
