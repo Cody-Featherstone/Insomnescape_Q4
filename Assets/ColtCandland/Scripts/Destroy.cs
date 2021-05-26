@@ -9,8 +9,8 @@ public class Destroy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject musicObj = GameObject.Find(Music);
-        Destroy(Music);
+        GameObject musicObj = GameObject.Find("Music");
+        Destroy(musicObj);
     }
 
     // Update is called once per frame

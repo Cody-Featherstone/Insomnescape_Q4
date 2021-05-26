@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ColtCandland/ColtScenes/GameOver.unity
     guid: 5881f683561dd384fb50bd8edeba9685
+  - enabled: 1
+    path: Assets/ColtCandland/Credit Scenes/OutScourced work.unity
+    guid: ee9816a6de9162841871aafb63f935a6
+  - enabled: 1
+    path: Assets/ColtCandland/ColtScenes/How to Play.unity
+    guid: 3764be7852a758344b7d306ed6465b67
   m_configObjects: {}
