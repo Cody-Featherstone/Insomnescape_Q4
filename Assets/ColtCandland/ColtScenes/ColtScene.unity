@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1343,7 +1343,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.427667
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -42049,6 +42049,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35713cc8570d6184e9bb7a44cdb37ecf, type: 3}
+--- !u!1 &1273314105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1053946169035668193, guid: 35713cc8570d6184e9bb7a44cdb37ecf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1273314104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1273314106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273314105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b9f619f816487479cdeef485a516ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 323746490}
+  Enemy: {fileID: 1273314105}
 --- !u!1 &1393729843
 GameObject:
   m_ObjectHideFlags: 0
@@ -42708,6 +42728,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35713cc8570d6184e9bb7a44cdb37ecf, type: 3}
+--- !u!1 &1781650042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1053946169035668193, guid: 35713cc8570d6184e9bb7a44cdb37ecf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1781650041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1781650043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781650042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b9f619f816487479cdeef485a516ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 323746490}
+  Enemy: {fileID: 1781650042}
 --- !u!4 &1850101863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6536999323614013891, guid: 4b662e4a002a4c3409f56f69b666938c,
