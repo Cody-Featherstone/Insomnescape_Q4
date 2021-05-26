@@ -20,7 +20,7 @@ public class EnemyKill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(Enemy.transform.position, Target.transform.position) <= 0.5f)
+        if (Vector2.Distance(Enemy.transform.position, Target.transform.position) <= 3f)
         {
             if (!ClockIsTicking)
             {
